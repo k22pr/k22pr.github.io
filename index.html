@@ -1,16 +1,115 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta class="viewport" name="viewport" content="user-scalable=yes,initial-scale=1, maximum-scale=1, minimum-scale=1">
 		<title>타이틀</title>
+		<script src="https://unpkg.com/vue"></script>
+		<!--<script src="./myvue.js"></script>-->
+		<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://k22pr.github.io/TisBe-CSS-Theme/css/index.css">
+		<link rel="stylesheet" href="./css/index.css">
 	</head>
 	<body>
 		<article class="wac9 mw12">
-			<div class="wd12 box">상자0</div>
+			<div class="wd12 box m0 white"></div>
+			<div class="wd12 box m0">
+				<div class="w4 mw12 user-title-box">
+					<div class="w12 user-title h3 tright mcenter">서버지기<span class="small">(@k22pr)</span></div>
+				</div>
+				<div class="w8 mw12 user-infomation-box">
+					<div class="w12 user-infomation">
+						<i class="fa fa-quote-left" aria-hidden="true"></i>
+						1995
+					</div>
+				</div>
+				<div class="w12">
+					<div class="w12 line">
+						<div class="title w3 tright mw1"><i class="fa fa-envelope-o"></i></div>
+						<div class="content w9 mw11">
+							<a href="mainto:admin@an1.kr">admin@an1.kr</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</article>
 		<article class="wac9 mw12">
-			<div class="wd8 box white">상자1</div>
-			<div class="wd4 box blue">상자2</div>
+			<div class="wd8 mw12 box white radi5">
+				<div class="title w12 h3">Using languge List</div>
+				<div class="info blue w12 p7">
+					사용해보았거나 사용할 수 있는 언어 목록입니다.
+				</div>
+				<ul class="w12 lang-list">
+					<li class="w12">
+						<div class="h4 w12 only-line">Web Programing (PHP<b>7</b>.x, JS, CSS3, SCSS, HTML5)</div>
+						<div class="content">
+							PHP Secure Coding <span class="small">(PDO Database Access, Force data type assignment, AES,RSA Encrypt)</span><br>
+							PHP Array Control <span class="small">(<a href="https://github.com/k22pr/PHPx-String2Mix/blob/master/source.php">String2Mix</a>)</span><br>
+							PHP Image Control <span class="small">(<a href="https://github.com/k22pr/PHP7-Image-Representative-color-extraction/blob/master/source.php">Image-Color-extraction</a>)</span><br>
+							Chromium-Extenstion Request <span class="small">(<a href="https://github.com/k22pr/MaruCleaner-ChromeExtension">marumaru clear</a>)</span><br>
+							SCSS Theme framework <span class="small">(<a href="https://github.com/k22pr/TisBe-CSS-Theme">Tisbe</a>)</span>
+						</div>
+					</li>
+					<li>
+						<div class="h4 w12 only-line">Server Programing(C, C++ , Java, Rust)</div>
+						<div class="content">
+							Java Runnable Threading<br>
+							Java Chatting Socket<br>
+							C++ MFC Control<br>
+						</div>
+					</li>
+					<li>
+						<div class="h4 w12 only-line">Client Programing (C#, Java)</div>
+						<div class="content">
+							C# USB DiskPart <span class="small">(USB Encrypt)</span><br>
+						</div>
+					</li>
+					<li>
+						<div class="h4 w12 only-line">Security</div>
+						<div class="content">
+							Penetration Testing <span class="small">(using Metasploit, nmap, jexboss, etc...)</span><br>
+							Build iptables firewall Policy <span class="small">(filter table, nat table)</span><br>
+							Assembly Reversing<br>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="wd4 mw12">
+				<div class="box blue w12">
+					그래프 상자
+				</div>
+				<div class="box white w12">
+					<div class="h3 w12 only-line">Can using OS list</div>
+					<div class="w12">
+						<div class="w12 line">
+							<div class="h4 title">Windows</div>
+							<ul class="content">
+								<li class="w12 only-line">Windows XP (only victim)</li>
+								<li class="w12 only-line">Windows 7 (legacy)</li>
+								<li class="w12 only-line">Windows 10 (mainly)</li>
+							</ul>
+						</div>
+						<div class="w12 line">
+							<div class="h4 title">Debian</div>
+							<ul class="content">
+								<li class="w12 only-line">Ubuntu 17.04 (Server, Client)</li>
+								<li class="w12 only-line">Kali Linux (Penetration testing)</li>
+							</ul>
+						</div>
+						<div class="w12 line">
+							<div class="h4 title">RedHat</div>
+							<ul class="content">
+								<li class="w12 only-line">Fedora20 (Server, Client)</li>
+								<li class="w12 only-line">CentOS (Server)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="wac9 mw12 image-box" style="background-image:url('./img/background.png');">
+			<div class="content w12 center tsb">
+				<div class="b2 w12">Languge test</div>
+			</div>
 		</article>
 	</body>
 </html>
