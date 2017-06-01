@@ -3,10 +3,8 @@
 		<meta charset="UTF-8">
 		<meta class="viewport" name="viewport" content="user-scalable=yes,initial-scale=1, maximum-scale=1, minimum-scale=1">
 		<title>타이틀</title>
-		<script src="https://unpkg.com/vue"></script>
-		<script src="./js/myvue.js"></script>
 		<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://k22pr.github.io/TisBe-CSS-Theme/css/index.css">
+		<link rel="stylesheet" href="../TisBe-CSS-Theme/docs/css/index.css">
 		<link rel="stylesheet" href="./css/index.css">
 	</head>
 	<body>
@@ -32,16 +30,29 @@
 				</div>
 			</div>
 		</article>
-		<article class="wac9 mw12 image-box" style="background-image:url('./img/langlist3.jpg');">
+		<article id="langList" class="wac9 mw12 image-box" style="background-image:url('./img/langlist3.jpg');">
 			<div class="content w12 center tsb">
 				<div class="w12">
-					<span class="h1">Languge List</span><br>
-					<span class="b5">사용할 수 있거나 사용하고 있는 언어 목록입니다.</span>
+					<span class="h1">{{ title }}</span><br>
+					<span class="b5">{{ content }}</span>
 				</div>
 			</div>
 		</article>
-		<article class="wac9 mw12">
-			
+		<article class="wac9 mw12 box white p0">
+			<div id="web-menu" class="tab-menu w12 flex">
+					<div class="tab-box w4 hover" v-on:click="">
+						<img src="./img/logo/logo-php.png">
+					</div>
+					<div class="tab-box w4">
+						<img src="./img/logo/logo-javascript.png">
+					</div>
+					<div class="tab-box w4">
+						<img src="./img/logo/logo-css.png">
+					</div>
+			</div>
+			<div class="tab-content p7">
+
+			</div>
 		</article>
 		<article class="wac9 mw12">
 			<div class="wd8 mw12 box white radi5">
@@ -83,7 +94,6 @@
 			</div>
 			<div class="wd4 mw12">
 				<div class="box blue w12">
-					<div class="">
 				</div>
 				<div class="box white w12">
 					<div class="h3 w12 only-line">Can using OS list</div>
@@ -114,5 +124,9 @@
 				</div>
 			</div>
 		</article>
+		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="./js/myvue.js"></script>
 	</body>
 </html>

@@ -37,5 +37,22 @@ body article.image-box {
     display: flex;
     text-align: center;
     color: rgba(255, 255, 255, 0.9); }
+body div.tab-menu div.tab-box {
+  min-height: 100px;
+  padding: 10px; }
+  body div.tab-menu div.tab-box img {
+    z-index: 1;
+    max-width: 100%;
+    height: 100px; }
+body div.bg-ment {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  font-size: 3em;
+  color: rgba(128, 128, 128, 0.2);
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10%; }
 
 /*# sourceMappingURL=index.css.map */
