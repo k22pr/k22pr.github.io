@@ -32,12 +32,24 @@ body{
   div.tab-menu{
     div.tab-box{
       min-height:100px;padding:10px;
-      img{z-index:1;max-width:100%;height:100px;}
+      img{z-index:1;width:auto;max-width:100%;height:100px;}
+    }
+    div.tab-content{
+      padding-top:20px;
+      div.h2{font-weight:600;}
     }
   }
   //background ment
   div.bg-ment{
     z-index:0;position:absolute;width:100%;bottom:10px;
     font-size:3em;color:rgba(128,128,128,.2);font-weight: bold;text-align:left;padding-left:10%;
+  }
+  
+  .component-fade-enter-active, .component-fade-leave-active {
+    transition: opacity .3s ease;
+  }
+  .component-fade-enter, .component-fade-leave-to
+  /* .component-fade-leave-active for <2.1.8 */ {
+    opacity: 0;
   }
 }

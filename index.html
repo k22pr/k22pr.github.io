@@ -4,7 +4,7 @@
 		<meta class="viewport" name="viewport" content="user-scalable=yes,initial-scale=1, maximum-scale=1, minimum-scale=1">
 		<title>타이틀</title>
 		<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../TisBe-CSS-Theme/docs/css/index.css">
+		<link rel="stylesheet" href="https://k22pr.github.io/TisBe-CSS-Theme/css/index.css">
 		<link rel="stylesheet" href="./css/index.css">
 	</head>
 	<body>
@@ -38,9 +38,9 @@
 				</div>
 			</div>
 		</article>
-		<article class="wac9 mw12 box white p0">
-			<div id="web-menu" class="tab-menu w12 flex">
-					<div class="tab-box w4 hover" v-on:click="">
+		<article id="tabMenu" class="wac9 mw12 box white p0">
+			<div class="tab-menu w12 flex">
+					<div class="tab-box w4 hover" v-on:click="changeTabMenu">
 						<img src="./img/logo/logo-php.png">
 					</div>
 					<div class="tab-box w4">
@@ -50,8 +50,13 @@
 						<img src="./img/logo/logo-css.png">
 					</div>
 			</div>
-			<div class="tab-content p7">
-
+			<div id="serverContent" class="tab-content p7">
+				<div class="h2 w12">{{title}}</div>
+				<div class="w12 info blue">{{description}}</div>
+			</div>
+			<div id="scriptContent" class="tab-content p7">
+				<div class="h2 w12">{{title}}</div>
+				<div class="w12 info blue">{{description}}</div>
 			</div>
 		</article>
 		<article class="wac9 mw12">
