@@ -1,4 +1,5 @@
 body{
+  font-size:13px;
   article{border:0px;}
   .user-title-box{padding-right:10px;}
   .user-infomation-box{
@@ -17,7 +18,7 @@ body{
   }
   article.image-box{
     margin-top:5px;margin-bottom:5px;
-    height:200px;min-height:200px;
+    height:300px;min-height:300px;
     background:fixed;
     background-repeat:no-repeat;
     background-position:center;
@@ -25,31 +26,41 @@ body{
     div.content{
       background:rgba(0,0,0,.65);width:100%;height:100%;display:flex;
       text-align:center;color:rgba(255,255,255,.9);
+      .b5{line-height:1.5;}
     }
   }
 
   //tab menu setting
+  div.tabMenu{background:#e5e5e5;}
   div.tab-menu{
+    border-top-right-radius: 10px; border-top-left-radius: 10px;padding-top:10px;
     div.tab-box{
-      min-height:100px;padding:10px;
-      img{z-index:1;width:auto;max-width:100%;height:100px;}
+      padding:10px;transition: .3s ease 0s;cursor:pointer;
+      img{z-index:1;width:auto;max-width:70%;}
     }
+    div.tab-box.hover{border-top-left-radius: 10px;border-top-right-radius: 10px;}
     div.tab-content{
       padding-top:20px;
       div.h2{font-weight:600;}
     }
   }
+
+  div.sbox{
+    bottom:0px;
+    button.social-btn{
+      color:#333;background:#edf2f6;border:0px;padding:10px;font-size:3em;
+      transition: 0.3s ease 0s;
+    }
+    button.social-btn:hover{
+      color:#fff;background:rgba(0,158,255,.9);
+    }
+  }
+
+
+
   //background ment
   div.bg-ment{
     z-index:0;position:absolute;width:100%;bottom:10px;
     font-size:3em;color:rgba(128,128,128,.2);font-weight: bold;text-align:left;padding-left:10%;
-  }
-  
-  .component-fade-enter-active, .component-fade-leave-active {
-    transition: opacity .3s ease;
-  }
-  .component-fade-enter, .component-fade-leave-to
-  /* .component-fade-leave-active for <2.1.8 */ {
-    opacity: 0;
   }
 }

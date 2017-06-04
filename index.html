@@ -3,63 +3,72 @@
 		<meta charset="UTF-8">
 		<meta class="viewport" name="viewport" content="user-scalable=yes,initial-scale=1, maximum-scale=1, minimum-scale=1">
 		<title>타이틀</title>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://k22pr.github.io/TisBe-CSS-Theme/css/index.css">
+		<link rel="stylesheet" href="../TisBe-CSS-Theme/docs/css/index.css">
 		<link rel="stylesheet" href="./css/index.css">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+		crossorigin="anonymous"></script>
+		<script src="./js/index.js"></script>
 	</head>
 	<body>
-		<article class="wac9 mw12">
-			<div class="wd12 box m0 white"></div>
-			<div class="wd12 box m0">
-				<div class="w4 mw12 user-title-box">
-					<div class="w12 user-title h3 tright mcenter">서버지기<span class="small">(@k22pr)</span></div>
-				</div>
-				<div class="w8 mw12 user-infomation-box">
-					<div class="w12 user-infomation">
-						<i class="fa fa-quote-left" aria-hidden="true"></i>
-						1995
-					</div>
-				</div>
-				<div class="w12">
-					<div class="w12 line">
-						<div class="title w3 tright mw1"><i class="fa fa-envelope-o"></i></div>
-						<div class="content w9 mw11">
-							<a href="mainto:admin@an1.kr">admin@an1.kr</a>
-						</div>
-					</div>
+		<header class="w12">
+		</header>
+		<article class="w12 box white pb-p5 pt-p5 pl0 pr0">
+			<div class="w3 mw12 center">
+				<img src="./img/profile/x198_profile_zoom.png" class="radi-p50">
+			</div>
+			<div class="w8 mw12 pl20">
+				<div class="w12"> <span class="h1">서버지기 <span class="small">@k22pr</span></span></div>
+				<div class="w12 info blue b4">
+					1995년생 프로그래밍을 좋아하는 학생입니다.
 				</div>
 			</div>
+			<div class="w1 mw12 sbox">
+				<button class="w12 mw3 social-btn"><i class="fa fa-github" aria-hidden="true"></i></button>
+				<button class="w12 mw3 social-btn"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
+				<button class="w12 mw3 social-btn"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+			</div>
 		</article>
-		<article id="langList" class="wac9 mw12 image-box" style="background-image:url('./img/langlist3.jpg');">
+		<article id="langList" class="wac12 mw12 image-box" style="background-image:url('./img/langlist3.jpg');">
 			<div class="content w12 center tsb">
 				<div class="w12">
-					<span class="h1">{{ title }}</span><br>
-					<span class="b5">{{ content }}</span>
+					<span class="h1">Langauge List</span><br>
+					<span class="b5">
+						사용할 수 있는 언어 목록 입니다. <br>PHP7.x, jQuery, Vue.js, Sass 등 다양한 웹언어를 다루며<br>
+						서버부터 클라이언트에 걸쳐 다양한 언어를 다룰 수 있습니다.
+					 </span>
 				</div>
 			</div>
 		</article>
-		<article id="tabMenu" class="wac9 mw12 box white p0">
-			<div class="tab-menu w12 flex">
-					<div class="tab-box w4 hover" v-on:click="changeTabMenu">
-						<img src="./img/logo/logo-php.png">
-					</div>
-					<div class="tab-box w4">
-						<img src="./img/logo/logo-javascript.png">
-					</div>
-					<div class="tab-box w4">
-						<img src="./img/logo/logo-css.png">
-					</div>
+		<article id="tabMenu" class="w12 p0 bdr0">
+			<div class="tab-menu wac10 mw12">
+					<div class="tab-box w1 mw2 hover" v-on:click="changeTabMenu"><img src="./img/logo/php.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/javascript.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/css.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/clang.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/cshap.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/java.png"></div>
+					<div class="tab-box w1 mw2"><img src="./img/logo/rust.png"></div>
 			</div>
-			<div id="serverContent" class="tab-content p7">
-				<div class="h2 w12">{{title}}</div>
-				<div class="w12 info blue">{{description}}</div>
-			</div>
-			<div id="scriptContent" class="tab-content p7">
-				<div class="h2 w12">{{title}}</div>
-				<div class="w12 info blue">{{description}}</div>
+			<div class="w12 box white m0 bdr0">
+				<div id="serverContent" class="tab-content p7">
+					<div class="wac9  mw12">
+						<div class="h2 w12">PHP</div>
+						<div class="w12 info blue">{{description}}</div>
+					</div>
+				</div>
+				<div class="wac9 mw12">
+					<div class="h2">프로젝트 </div>
+					<div class="w6 info oran">
+							asddsa
+					</div>
+				</div>
 			</div>
 		</article>
-		<article class="wac9 mw12">
+		<article class="w12">
 			<div class="wd8 mw12 box white radi5">
 				<ul class="w12 lang-list">
 					<li class="w12">
@@ -129,9 +138,5 @@
 				</div>
 			</div>
 		</article>
-		
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="https://unpkg.com/vue"></script>
-		<script src="./js/myvue.js"></script>
 	</body>
 </html>
