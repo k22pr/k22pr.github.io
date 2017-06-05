@@ -5,25 +5,23 @@
 		<title>타이틀</title>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../TisBe-CSS-Theme/docs/css/index.css">
+		<!--<link rel="stylesheet" href="../TisBe-CSS-Theme/css/index.css">-->
+		<link rel="stylesheet" href="https://k22pr.github.io/TisBe-CSS-Theme/css/index.css">
 		<link rel="stylesheet" href="./css/index.css">
-
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-		crossorigin="anonymous"></script>
-		<script src="./js/index.js"></script>
+		<link rel="stylesheet" href="./css/anime.css">
+		<link rel="stylesheet" href="../Font-Awesome-Pro/icons/light/css/external.css">
 	</head>
 	<body>
 		<header class="w12">
 		</header>
-		<article class="w12 box white pb-p5 pt-p5 pl0 pr0">
-			<div class="w3 mw12 center">
-				<img src="./img/profile/x198_profile_zoom.png" class="radi-p50">
+		<article class="wac9 box white pb-p5 pt-p5 pr0 bdr0 radi10 mb-p5">
+			<div class="w2 mw12 center">
+				<img src="./img/profile/x198_profile_zoom.png" class="radi-p50 profile-image w12">
 			</div>
-			<div class="w8 mw12 pl20">
-				<div class="w12"> <span class="h1">서버지기 <span class="small">@k22pr</span></span></div>
+			<div class="w9 mw12 pl20">
+				<div class="w12"> <span class="h1"> <i class="fal fal-fal-user"></i>서버지기 <span class="small">@k22pr</span></span></div>
 				<div class="w12 info blue b4">
-					1995년생 프로그래밍을 좋아하는 학생입니다.
+					설명설명 설명
 				</div>
 			</div>
 			<div class="w1 mw12 sbox">
@@ -35,33 +33,30 @@
 		<article id="langList" class="wac12 mw12 image-box" style="background-image:url('./img/langlist3.jpg');">
 			<div class="content w12 center tsb">
 				<div class="w12">
-					<span class="h1">Langauge List</span><br>
-					<span class="b5">
-						사용할 수 있는 언어 목록 입니다. <br>PHP7.x, jQuery, Vue.js, Sass 등 다양한 웹언어를 다루며<br>
-						서버부터 클라이언트에 걸쳐 다양한 언어를 다룰 수 있습니다.
-					 </span>
+					<span class="h1"><i class="fal fal-code"></i> {{title}}</span><br>
+					<span class="b5" v-html="content"></span>
 				</div>
 			</div>
 		</article>
-		<article id="tabMenu" class="w12 p0 bdr0">
-			<div class="tab-menu wac10 mw12">
-					<div class="tab-box w1 mw2 hover" v-on:click="changeTabMenu"><img src="./img/logo/php.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/javascript.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/css.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/clang.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/cshap.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/java.png"></div>
-					<div class="tab-box w1 mw2"><img src="./img/logo/rust.png"></div>
+		<article id="tabMenu" class="w12 p0 bdr0 mb-p5">
+			<div class="tab-menu wac10 mw12 content">
+					<div class="tab-box w1 mw2 hover" v-on:click="changeTabMenu(0)"><img src="./img/logo/php.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/javascript.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/css.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/clang.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/cshap.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/java.png"></div>
+					<div class="tab-box w1 mw2" v-on:click="changeTabMenu(0)"><img src="./img/logo/rust.png"></div>
 			</div>
 			<div class="w12 box white m0 bdr0">
-				<div id="serverContent" class="tab-content p7">
+				<div id="tabContent" class="tab-content p7">
 					<div class="wac9  mw12">
-						<div class="h2 w12">PHP</div>
+						<div class="h2 w12"><i class="fal fal-comment"></i> {{title}}</div>
 						<div class="w12 info blue">{{description}}</div>
 					</div>
 				</div>
 				<div class="wac9 mw12">
-					<div class="h2">프로젝트 </div>
+					<div class="h2"><i class="fal fal-code"></i> 프로젝트 </div>
 					<div class="w6 info oran">
 							asddsa
 					</div>
@@ -138,5 +133,8 @@
 				</div>
 			</div>
 		</article>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="./js/myvue.js"></script>
+		<!--<script src="./js/index.js"></script>-->
 	</body>
 </html>

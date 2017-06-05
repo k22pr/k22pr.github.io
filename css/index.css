@@ -84,5 +84,8 @@ body {
     font-weight: bold;
     text-align: left;
     padding-left: 10%; }
+  body img.profile-image {
+    width: 192px;
+    max-width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

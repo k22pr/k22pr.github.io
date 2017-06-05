@@ -1,5 +1,5 @@
 body{
-  font-size:13px;
+  font-size:13px;line-height:1.5;
   article{border:0px;}
   .user-title-box{padding-right:10px;}
   .user-infomation-box{
@@ -57,10 +57,12 @@ body{
   }
 
 
-
   //background ment
   div.bg-ment{
     z-index:0;position:absolute;width:100%;bottom:10px;
     font-size:3em;color:rgba(128,128,128,.2);font-weight: bold;text-align:left;padding-left:10%;
   }
+  
+  //img
+  img.profile-image{width:168px;}
 }
