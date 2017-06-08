@@ -1,4 +1,4 @@
 @keyframe profile-image{
-  0%{}
-  100%{}
+  0%{left:-100%;transform:roate(360deg);}
+  100%{left:0%;transform:dorate(0deg);}
 }
