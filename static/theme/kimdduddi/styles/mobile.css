@@ -1,0 +1,364 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html {
+  background: #e9ecef;
+}
+
+html body {
+  letter-spacing: -0.05em !important;
+  background: transparent;
+  font-family: "Nanum Gothic", Arial, Helvetica, sans-serif;
+  /* 모바일 */
+}
+
+html body a {
+  color: #fab005;
+}
+
+html body #header-top-notice {
+  display: none;
+}
+
+html body header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+html body header #header-area > #header-search-link {
+  color: #fab005;
+}
+
+html body header #header-area #header-bar-link {
+  color: #fab005;
+}
+
+html body header #header-area #header-search-btn {
+  color: #fab005;
+}
+
+html body header #header-area > a > h1 {
+  background: url("https://upload.tgd.kr/20180911/717561690381d66be6c0704caa9863bb.png") no-repeat;
+  background-size: 110px 38px;
+  height: 40px;
+}
+
+html body header form.input-group input[type="text"] {
+  padding: 6px;
+  height: 32px !important;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+html body header form.input-group .input-group-btn button {
+  border: 1px solid #ccc;
+}
+
+html body header form.input-group .input-group-btn button:hover {
+  transition: 0.3s ease 0s;
+}
+
+html body header form.input-group .input-group-btn button.btn.square.btn-default.dropdown-toggle {
+  padding-left: 15px;
+  padding-right: 10px;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+html body header form.input-group .input-group-btn button.btn.square.btn-default {
+  padding-left: 10px;
+  padding-right: 15px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
+html body #board-info {
+  border-bottom: 5px solid #ffc019;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+html body #board-info h1 {
+  padding: 10px 0px 10px 80px;
+  width: calc(100%);
+}
+
+html body #board-info h1 img#board-info-profile-img {
+  position: absolute;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+html body #board-info h1 a {
+  font-size: 1.4em;
+}
+
+html body #board-info a.board-right-menu {
+  background: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #dee2e6;
+  color: #fab005;
+}
+
+html body #article-info {
+  margin: 10px 2px 0px 2px;
+  padding: 15px 10px 10px 10px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border: 1px solid #dee2e6;
+  border-bottom: none !important;
+  width: calc(100% - 4px);
+  background: #fff;
+}
+
+html body #article-info h2 {
+  float: left;
+  padding-left: 55px;
+}
+
+html body #article-info h2 span {
+  color: #fab005 !important;
+}
+
+html body #article-info img.article-profile-img {
+  position: absolute;
+  left: 10px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+html body #article-content-wrapper {
+  overflow: hidden;
+  margin: 0px 2px 8px 2px;
+  width: calc(100% - 4px);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-bottom: 5px;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  background: #fff;
+}
+
+html body #article-content-wrapper #article-content {
+  background: #fff;
+}
+
+html body #article-content-wrapper > .header {
+  padding-top: none;
+  background: none;
+  border-top: none !important;
+  border-bottom: 2px dashed #dee2e6;
+}
+
+html body #article-reply-area {
+  margin: 4px 2px 20px 2px;
+  width: calc(100% - 4px);
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+html body #article-reply-area .header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: -webkit-linear-gradient(top right, #ffc019, #fab005);
+}
+
+html body #article-reply-area .header h5,
+html body #article-reply-area .header a {
+  color: #fff;
+}
+
+html body #article-reply-area #reply-real-area {
+  border-bottom: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  background: #f1f3f5;
+  padding: 4px 4px;
+}
+
+html body #article-reply-area #reply-real-area .reply {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  margin-bottom: 4px;
+}
+
+html body #article-reply-area #reply-real-area .reply div.reply-header {
+  background: none;
+  padding: 6px 14px 4px 8px;
+  border-bottom: 2px dashed #dee2e6;
+}
+
+html body #article-reply-area #reply-real-area .reply div.reply-header .reply-writer.logged {
+  color: #fab005;
+}
+
+html body #article-reply-area #reply-real-area .reply div.reply-content {
+  background: none;
+  padding: 8px 8px 8px 14px;
+}
+
+html body #article-list {
+  margin-top: 4px;
+}
+
+html body #article-list #article-list-category {
+  background: -webkit-linear-gradient(top right, #ffc019, #fab005);
+  padding: 4px;
+}
+
+html body #article-list #article-list-category a {
+  background: none;
+  border-radius: 18px;
+  transition: 0.2s ease 0s;
+  color: #fff !important;
+}
+
+html body #article-list #article-list-category a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html body #article-list #article-list-category a.active {
+  background: rgba(255, 255, 255, 0.33);
+}
+
+html body #article-list > .article-list-row {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  margin: 3px 4px;
+  width: calc(100% - 8px);
+  border-radius: 16px;
+  border-bottom-left-radius: 0px;
+}
+
+html body #article-list > .article-list-row > .item > .list-header {
+  border-bottom: none;
+}
+
+html body #article-list > .article-list-row > .item > .list-header span {
+  background: #fab005;
+}
+
+html body #article-list > .article-list-row > .item > .list-header strong {
+  background: #e03131;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+html body #article-list > .article-list-row > .item > a.list-title {
+  border-bottom: none;
+}
+
+html body #article-list > .article-list-row > .item > a.list-title > .list-writer {
+  display: block;
+}
+
+html body #article-list > .article-list-row > .item > .list-time {
+  border-bottom: none;
+}
+
+html body #article-list > .article-list-row.notice {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin: 4px;
+  width: calc(100% - 8px);
+  border: none;
+  border-left: 3px solid #e03131;
+  border-bottom: 1px solid #dee2e6;
+  background-color: #fff;
+}
+
+html body #article-list > .article-list-row.notice > .item {
+  padding: 6px 0px;
+}
+
+html body #article-list > .article-list-row.notice > .item > a.list-title > .list-writer {
+  display: none;
+}
+
+html body #article-list .pagination-area .pagination > li > a {
+  color: #fab005;
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  margin-left: 5px;
+}
+
+html body #article-list .pagination-area .pagination > li > a:hover {
+  transition: 0.3s ease 0s;
+  background: #fafafa;
+}
+
+html body #article-list .pagination-area .pagination > li.active > a {
+  color: #fff;
+  font-weight: bold;
+  background: #fab005;
+}
+
+html body #article-list #article-list-menu > .btn.best {
+  border-radius: 15px;
+  background: #ffc019;
+  color: #fff;
+}
+
+html body #article-list #article-list-menu > .btn.write {
+  border-radius: 15px;
+  background: #fab005;
+  color: #fff;
+}
+
+html body #article-list form.input-group input[type="text"] {
+  padding: 6px;
+  height: 34px !important;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+html body #article-list form.input-group .input-group-btn button {
+  border: 1px solid #ccc;
+}
+
+html body #article-list form.input-group .input-group-btn button:hover {
+  transition: 0.3s ease 0s;
+}
+
+html body #article-list form.input-group .input-group-btn button.btn.square.btn-default.dropdown-toggle {
+  padding-left: 15px;
+  padding-right: 10px;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+html body #article-list form.input-group .input-group-btn button.btn.square.btn-default {
+  padding-left: 10px;
+  padding-right: 15px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
+html body #article-list
+> .article-list-row
+> .item
+> a.list-title
+> .list-writer.logged
+> span {
+  color: #fab005;
+}

@@ -1,0 +1,498 @@
+@import "variable.scss";
+@import "shared.scss";
+
+html {
+  // background: $color-main;
+  background: $body-background;
+  height: auto !important;
+}
+body {
+  letter-spacing: -0.05em !important;
+  background: transparent;
+  font-family: "Nanum Gothic", sans-serif;
+
+  button,
+  input,
+  textarea {
+    outline: none;
+  }
+}
+
+//버튼에 마우스를 올렸을시 색상을 0.2초 동안 천천히 변하게 합니다.
+button,
+a.btn {
+  transition: $trans-time;
+}
+.btn-default {
+  background: $button-white-bg !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 전체 쉐도우 */
+/*
+header #header-bar>.row,
+#main .menu-wrapper,
+#main #main-content>div.frame {
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
+}
+*/
+.row {
+  margin: 0px;
+}
+//상단의 오른쪽의 검색 창
+header {
+  padding-bottom: 0px;
+  .row > div:nth-child(1) > a {
+    //background: url(https://upload.tgd.kr/20180911/717561690381d66be6c0704caa9863bb.png) no-repeat;
+    display: block;
+    height: 50px;
+    img {
+      //display: none;
+    }
+  }
+  #right-search-form {
+    float: right;
+    overflow: hidden;
+    > input[type="text"] {
+      float: left;
+      color: $color-main-deep;
+      border: none;
+      //border-bottom: 2px solid $color-main-deep;
+      padding-left: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    > input[type="text"]::placeholder {
+      color: $color-main;
+    }
+    #right-search-btn {
+      float: left;
+      color: #f5f5f5;
+      background: $button-bg;
+      padding: 1px 15px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  #header-bar {
+    position: absolute;
+    z-index: 3;
+    top: 70px;
+    left: calc((100% - 1100px) / 2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0px;
+    padding: 0px;
+    > .row {
+      border: $default-border $color-main-border;
+      //border-bottom: 1px solid $color-main;
+      //border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+      //background: $header-bar;
+      background: -webkit-linear-gradient(top left, rgba(20, 23, 26, 0.5), rgba(40, 43, 46, 0.5));
+    }
+    a.dropdown-toggle {
+      color: #fff;
+    }
+    #header-top-notice {
+      a {
+        color: #f5f5f5;
+      }
+      strong.notice-badge {
+        background: $color-main-deep;
+      }
+    }
+    .fa {
+      color: #fff;
+    }
+  }
+}
+// 왼쪽의 매뉴 부분
+#main #main-menu {
+  margin-top: 120px;
+  .menu-wrapper {
+    border: 0px;
+    > .header {
+      a,
+      a:hover {
+        color: #fff;
+        background: none;
+        border: none;
+      }
+      background: $button-bg;
+      padding: 8px;
+    }
+    // 매뉴의 마지막 1개의 왼쪽아래 끝을 둥글게
+    /*
+    a:nth-last-child(1) {
+      border-bottom-left-radius: $radius;
+      /order-bottom-right-radius: $radius;
+    }
+    */
+    // 각 매뉴별 구별선
+    div.spacer {
+      background: $base-color;
+      border-top: 2px dashed rgba(255, 255, 255, 0.1);
+      height: 0px;
+    }
+    // 마우스를 올렸을때 색상이 0.15초 동안 천천히 변하게
+    a.shortcut-link,
+    a.useful-links,
+    a.game,
+    a {
+      transition: 0.15s ease 0s;
+      background: $menu-list;
+      color: #aaa;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: none;
+      padding: 7px;
+      em,
+      i.fa.fa-square {
+        color: #79ccff;
+      }
+    }
+    // 매뉴에 마우스를 올렸을때 변하는 색상
+    a.shortcut-link:hover,
+    a.useful-links:hover,
+    a.game:hover,
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+// 메인 콘텐츠 전체 부분
+
+#main {
+  padding: 0px 0px;
+  .row {
+    margin: 0px;
+    margin-top: 50px;
+  }
+  #main-content {
+    > div.frame {
+      background: none; // 게시글의 제목줄 // 메인 콘텐츠 상단의 프로필 이미지와 이름이 적혀있는 부분
+      border: none;
+      margin-top: 120px;
+      div#board-info {
+        overflow: hidden;
+        position: absolute;
+        top: -34px;
+        width: 1100px;
+        left: calc((100% - 1100px));
+        height: 150px;
+        background: $base-8;
+        border-bottom: 3px solid $color-main;
+        //border-image: $button-bg 3 100%;
+
+        > img,
+        > h1,
+        > #board-info-bottom {
+          float: left !important;
+        }
+        // 프로필 이미지
+        > img#board-info-profile-img {
+          z-index: 0;
+          position: absolute;
+          border-radius: 0px;
+          top: -450px;
+          left: 15%;
+          width: 70%;
+          filter: blur(20px);
+        }
+        // 윗줄
+        > h1 {
+          z-index: 2;
+          position: absolute;
+          color: #f5f5f5;
+          width: 100%;
+          height: calc(110px - 3px);
+          padding: 60px 0px 0px 0px;
+          margin: 0px;
+          top: 0px;
+          left: 0px;
+          border: 0px;
+          border-top: 1px solid rgba(0, 0, 0, 0.5);
+          background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5));
+          text-align: center;
+          > a {
+            text-shadow: 2px 0px 2px #000, -2px 0px 2px #000, 0px 2px 2px #000, 0px -2px 2px #000;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 30px;
+            transition: $trans-time;
+          }
+          > a:hover {
+            color: $color-main-deep;
+          }
+          > a.badge-live {
+            text-shadow: none;
+          }
+          span.badge {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+          }
+          span#viewers-area {
+            position: absolute;
+            top: 88px;
+            right: 10px;
+            color: #f5f5f5;
+          }
+          span#viewers-area::after {
+            font-size: 12px;
+            content: "명";
+          }
+          a.badge-live {
+            font-size: 12px;
+          }
+        }
+        // 아랫줄
+        > #board-info-bottom {
+          background: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          padding: 0px;
+          padding-top: 5px;
+          border: 0px;
+          width: 100%;
+          height: 40px;
+          margin-top: 6px;
+          color: $color-main-deep;
+          text-align: center;
+          a {
+            color: $color-main;
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+          }
+          a:nth-last-child(1) {
+            border-right: none;
+          }
+        }
+      }
+      div#article-info {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        border: $default-border $color-main-border;
+        border-bottom: none;
+        background: $base-color;
+        color: #fff;
+        padding: 20px 10px 10px 10px;
+        margin-top: 10px;
+        > h2 > span.category {
+          color: #aaa !important;
+          border-right: none;
+        }
+        // 작성자의 프로필 이미지
+        .article-profile-img {
+          top: 20px;
+          left: 20px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        // 게시글 제목
+        // (이미지가 왼쪽에 오기 때문에 padding-left를 이미지크기+여백 값만큼 줘야합니다.)
+        h2,
+        #article-info-writer {
+          padding-left: 80px;
+        }
+      }
+      // 게시글의 댓글 부분
+      div#article-reply-area {
+        border: $default-border $color-main-border;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        background: $base-color;
+        div.header {
+          background: $line-bg;
+          border-top-left-radius: $radius;
+          border-top-right-radius: $radius;
+          h5 {
+            color: #fff;
+          }
+        }
+        // 댓글 작성 버튼
+        .btn-primary {
+          border: 0;
+          padding: 7px 12px;
+          font-size: 15px;
+          background: $button-bg;
+          transition-duration: 0s;
+        }
+        .btn-primary:hover {
+          background: #3da1ff;
+        }
+        // 실제 달린 댓글들
+        #reply-real-area {
+          background: $base-color;
+          padding: 10px 10px;
+          .reply {
+            background: $base-6;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            border-bottom-left-radius: 0px;
+            // 댓글 상단의 프로필 이미지와 작성자 닉네임 부분
+            div.reply-header {
+              color: #ccc;
+              background: none;
+              padding: 10px 20px 5px 10px;
+              border-bottom: 2px dashed $base-8;
+              .reply-writer.logged {
+                color: $color-main-deep;
+              }
+            }
+            // 댓글의 내용이 적혀있는 부분
+            div.reply-content {
+              color: $white;
+              background: none;
+              padding: 10px 10px 20px 15px;
+            }
+          }
+        }
+      }
+      // 댓글 부분 아래오는 광고
+      div#article-reply-area ~ div {
+        background: none;
+        border-bottom-left-radius: 20px;
+        margin-bottom: 20px;
+        div div {
+          margin: 0px !important;
+          border-top: 0px !important;
+        }
+      }
+    }
+  }
+}
+// 게시글 목록
+div#article-list {
+  border-radius: $radius;
+  border: $default-border $color-main-border;
+  padding: 0px;
+  .article-list-row:nth-of-type(2) {
+    border-top: 0px;
+  }
+
+  #article-option-area {
+    top: 3px;
+    right: 3px;
+    > #article-option-area-toggle-btn {
+      border-radius: 18px;
+      background: $base-7;
+      color: #f5f5f5;
+    }
+  }
+  // 게시글 목록 상단의 카테고리
+  div#article-list-category {
+    border: none;
+    background: $line-bg;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    > a {
+      background: none !important;
+      color: #fff !important;
+      padding: 13px 16px;
+      font-size: 13px;
+      transition: 0.2s ease 0s;
+      border-right: $default-border rgba(255, 255, 255, 0.15);
+    }
+    > a:hover {
+      background: rgba(255, 255, 255, 0.25) !important;
+    }
+  }
+  // 게시글 목록의 게시글
+  div.article-list-row {
+    width: calc(100%);
+    border: none;
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: $base-color;
+    transition: $trans-time;
+    padding: 2px 0px 2px 0px;
+    margin-top: 4px;
+    border-radius: 15px;
+    // 머지이거
+    div.item {
+      div.list-header {
+        border: none;
+        span {
+          //background: $color-main-deep;
+          background-color: $base-8 !important;
+        }
+        // 추천이 0개인 추천수
+        div.v0 > span {
+          //background: #999 !important;
+          background-color: $base-8;
+          color: #999;
+        }
+        strong {
+          color: #bd3b3b !important;
+        }
+        b {
+          color: $color-main;
+        }
+      }
+      div.list-title {
+        > div.list-category {
+          width: 80px;
+          border-left: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          span.category {
+            color: #aaa !important;
+          }
+        }
+      }
+    }
+    // 제목
+    > div.item > .list-title {
+      border-bottom: 0px;
+      > a:visited {
+        color: #aaa !important;
+      }
+      a {
+        color: #f5f5f5 !important;
+        transition: 0.2s ease 0s;
+      }
+      a:hover {
+        color: $color-main !important;
+      }
+      small.comment-count {
+        color: $color-main;
+      }
+      .list-writer.logged > span {
+        color: $color-main-deep;
+      }
+    }
+    // 시간
+    > div.item > .list-time {
+      border-bottom: 0px;
+    }
+  }
+  // 게시글 목록에 마우스를 올렸을때
+  div.article-list-row:hover {
+    background: $base-6;
+  }
+  // 게시글 목록의 공지사항
+  div.article-list-row.notice {
+    // border-top-left-radius:0px;
+    // border-bottom-left-radius:0px; // border:1px dashed rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(247, 75, 72, 0.1);
+    //background: rgba(247, 75, 72, 0.1);
+    background: $base-6;
+    // border:1px solid rgba(247,75,72,.5);
+  }
+
+  // 게시글 목록의 공지사항에 마우스를 올렸을때
+  div.article-list-row.notice:hover {
+    background: rgba(247, 75, 72, 0.15);
+  }
+  div.article-list-row.hot {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  // 게시글 목록의 공지사항에 마우스를 올렸을때
+  div.article-list-row.hot:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  > div.article-list-row.active {
+    background-color: rgba(121, 204, 255, 0.2);
+  }
+}

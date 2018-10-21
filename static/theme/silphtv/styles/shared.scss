@@ -1,0 +1,195 @@
+@import "variable.scss";
+
+span.a-badge i.fa.fa-picture-o {
+  color: $color-main-deep;
+}
+
+.btn-outline-danger {
+  background: $button-red-bg !important;
+}
+
+#main-content {
+  // 실제 게시글 콘텐츠가 시작되는 부분
+  div#article-content-wrapper {
+    padding: 0px;
+    border: $default-border $color-main-border;
+    background: $base-6;
+    color: #eee;
+    border-top: none;
+    border-bottom-left-radius: $radius; // 게시글 상단의 작성시간등
+    border-bottom-right-radius: $radius; // 게시글 상단의 작성시간등
+    div.header {
+      background: $base-6;
+      color: #999;
+      border-top: 2px dashed $base-8;
+    }
+    // 게시글의 실제 내용
+    div#article-content {
+      padding: 20px 10px;
+      border: none;
+    }
+    div.vote-area {
+      button {
+        color: #f5f5f5;
+        border: none;
+        padding: 8px 15px;
+        transition-duration: 0s !important;
+      }
+      button.btn-outline-success {
+        background: $button-like-bg;
+      }
+      button.btn-outline-success:hover {
+        background: #ff7e00 !important;
+      }
+      button.btn-outline-primary {
+        background: $button-bg;
+      }
+      button.btn-outline-primary:hover {
+        background: #3da1ff !important;
+      }
+      border: none;
+    }
+    // 게시글 하단의 버튼들
+    div.footer {
+      background: $base-color;
+      padding: 10px 15px;
+      border-top: 2px dashed $base-8;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+  }
+}
+
+#article-list-menu {
+  // 인기글 버튼입니다.
+  > .btn {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+  }
+  > .btn.best {
+    background: $button-like-bg !important;
+    color: #fff;
+  }
+  // 글 쓰기 버튼 입니다.
+  > .btn.write {
+    background: $button-bg;
+    color: #fff;
+  }
+}
+// 게시글 목록 하단매뉴
+#article-list-menu,
+.pagination-area {
+  // 중앙의 페이지 넘버 부분입니다.
+  .pagination > li > a {
+    color: #eee;
+    background: $base-7;
+    border-radius: 50%;
+    margin-left: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  // 페이지 넘버중 현재 페이지입니다.
+  .pagination > li > a:hover {
+    transition: 0.3s ease 0s;
+    background: $base-8;
+  }
+  // 현재 페이지
+  .pagination > li.active > a {
+    color: #fff;
+    font-weight: bold;
+    background: $button-bg;
+  }
+  // 중앙의 페이지 넘버 부분입니다.
+  .pagination > li > a {
+    color: #eee;
+    background: $base-7;
+    border-radius: 50%;
+    margin-left: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  // 페이지 넘버중 현재 페이지입니다.
+  .pagination > li > a:hover {
+    transition: 0.3s ease 0s;
+    background: $base-8;
+  }
+  // 현재 페이지
+  .pagination > li.active > a {
+    color: #fff;
+    font-weight: bold;
+    background: $button-bg;
+  }
+}
+
+footer {
+  background-color: $body-background;
+  color: #ccc;
+  a {
+    transform: 0.2s ease 0s;
+  }
+}
+a {
+  color: $color-main-deep;
+}
+a:hover {
+  text-decoration: none;
+  color: $color-main;
+}
+
+// 하단의 검색박스 부분 입니다.
+form.input-group {
+  margin-bottom: 10px;
+  // 중앙의 검색어 입력부분
+  input[type="text"] {
+    padding: 6px;
+    height: 34px !important;
+    border: none;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  // 오른쪽의 검색타입 버튼
+  .input-group-btn {
+    button {
+      border: none;
+    }
+    button:hover {
+      transition: 0.3s ease 0s;
+    }
+    button.btn.square.btn-default.dropdown-toggle {
+      padding: 8px 15px 9px 10px;
+      border-top-left-radius: 17px;
+      border-bottom-left-radius: 17px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    // 왼쪽의 돋보기 버튼
+    button.btn.square.btn-default {
+      padding: 8px 15px 9px 10px;
+      border-top-right-radius: 17px;
+      border-bottom-right-radius: 17px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+//rp게시글
+#comment-write-form-area {
+  padding: 0px;
+  .fr-box.fr-basic .fr-wrapper {
+    background: $base-color;
+  }
+  .fr-toolbar {
+    background: $base-color;
+    border-top: 5px solid $color-main;
+  }
+
+  .fr-separator {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .fr-toolbar .fr-command.fr-btn,
+  .fr-popup .fr-command.fr-btn {
+    color: $white;
+  }
+  .fr-box.fr-basic .fr-element {
+    color: #fff;
+  }
+}
