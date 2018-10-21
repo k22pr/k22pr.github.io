@@ -10,15 +10,19 @@ SASS 로 제작되었습니다.
 제가 이미지 제작을 할 줄 몰라서 트게더 로고는 원본으로 되어있습니다.
 이후 다른 능력자분이 만들어 주신다면 수정하겠습니다.
 
-## PC 버젼
+## 적용방법
 
-#### CSS 버젼(minify) [파일보기](./styles/index.min.css)
+### 윗칸 (데스크톱 뷰 CSS)
 
-> Custom CSS 에 적용해야 할 파일입니다.
+```css
+@import url("https://k22pr.github.io/static/Tgd-Theme/theme/kimdduddi/styles/index.min.css");
+```
 
-#### 원본보기(SCSS) [파일보기](./styles/index.scss)
+### 아래칸 (모바일 뷰 CSS)
 
-> 주석설명이 달린 수정할 수 있는 SCSS 원본 파일입니다.
+```css
+@import url("https://k22pr.github.io/static/Tgd-Theme/theme/kimdduddi/styles/mobile.min.css");
+```
 
 ### 미리보기
 
@@ -28,14 +32,6 @@ SASS 로 제작되었습니다.
 ---
 
 ## 모바일
-
-#### CSS 버젼(minify) [파일보기](./styles/mobile.min.css)
-
-> Custom CSS 에 적용해야 할 파일입니다.
-
-#### 원본보기(SCSS) [파일보기](./styles/mobile.scss)
-
-> 주석설명이 달린 수정할 수 있는 SCSS 원본 파일입니다.
 
 ### 미리보기
 

@@ -8,13 +8,13 @@
 ### 윗칸 (데스크톱 뷰 CSS)
 
 ```css
-@import url("https://k22pr.github.io/static/Tgd-Them/silphtv/styles/index.min.css");
+@import url("https://k22pr.github.io/static/Tgd-Theme/theme/silphtv/styles/index.min.css");
 ```
 
 ### 아래칸 (모바일 뷰 CSS)
 
 ```css
-@import url("https://k22pr.github.io/static/Tgd-Them/silphtv/styles/mobile.min.css");
+@import url("https://k22pr.github.io/static/Tgd-Theme/theme/silphtv/styles/mobile.min.css");
 ```
 
 ---
