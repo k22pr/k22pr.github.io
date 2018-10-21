@@ -1,0 +1,32 @@
+$color-main: #79ccff;
+$color-main-deep: #58bfff;
+$color-main-border: rgba(122, 222, 255, 0.8);
+
+$body-background: #2f3234;
+$mobile-bg: #e9ecef;
+$white: #f5f5f5;
+
+$base-3: rgb(40, 45, 50);
+$base-4: rgb(50, 55, 60);
+$base-color: rgb(60, 63, 66);
+$base-6: rgb(70, 73, 76);
+$base-7: rgb(80, 83, 86);
+$base-8: rgb(90, 93, 96);
+
+$radius: 0px;
+
+$trans-time: 0.15s ease 0s;
+
+$default-border: 0px solid;
+
+$main-bg: -webkit-linear-gradient(top left, $color-main, $color-main-deep);
+$button-bg: -webkit-linear-gradient(top left, #79ccff, #3da1ff);
+$button-white-bg: -webkit-linear-gradient(top left, #f5f5f5, #eee);
+
+$line-bg: -webkit-linear-gradient(top right, #79ccff, #3da1ff);
+$button-like-bg: -webkit-linear-gradient(top left, #ffa200, #ff7e00);
+$button-red-bg: -webkit-linear-gradient(top left, #ff7979, #ff5151);
+
+$menu-list: -webkit-linear-gradient(top left, $base-color, $base-4);
+$article-list: -webkit-linear-gradient(top left, $base-6, $base-color);
+$header-bar: -webkit-linear-gradient(top left, $base-4, $base-3);

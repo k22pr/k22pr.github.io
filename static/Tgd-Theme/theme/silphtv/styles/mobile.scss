@@ -1,0 +1,369 @@
+@import "variable.scss";
+@import "shared.scss";
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html {
+  background: $body-background;
+  body {
+    letter-spacing: -0.05em !important;
+    background: transparent;
+    font-family: "Nanum Gothic", Arial, Helvetica, sans-serif;
+    a {
+      color: $color-main-deep;
+    }
+    /* 모바일 */
+
+    #header-top-notice {
+      display: none;
+    }
+
+    div[align="center"] {
+      background: none !important;
+    }
+
+    header {
+      background: -webkit-linear-gradient(top, rgb(20, 23, 26) 0%, rgba(20, 23, 26, 0.8) 33%, rgba(20, 23, 26, 0) 90%);
+      border: none;
+
+      #header-area {
+        > #header-search-link {
+          color: $color-main-deep;
+        }
+        #header-bar-link {
+          color: $color-main-deep;
+        }
+        #header-search-btn {
+          color: $color-main-deep;
+        }
+        > a > h1 {
+          //background: url("https://upload.tgd.kr/20180911/717561690381d66be6c0704caa9863bb.png") no-repeat;
+          background-size: 110px 38px;
+          height: 40px;
+        }
+      }
+
+      //하단의 검색박스 부분 입니다.
+      form.input-group {
+        //중앙의 검색어 입력부분
+        input[type="text"] {
+          padding: 6px;
+          height: 32px !important;
+          border: 1px solid #ccc;
+          border-left: 0px;
+          border-right: 0px;
+        }
+        .input-group-btn {
+          button {
+            border: 1px solid #ccc;
+          }
+          button:hover {
+            transition: 0.3s ease 0s;
+          }
+          //오른쪽의 검색타입 버튼
+          button.btn.square.btn-default.dropdown-toggle {
+            padding-left: 15px;
+            padding-right: 10px;
+            border-top-left-radius: 17px;
+            border-bottom-left-radius: 17px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+          }
+          //왼쪽의 돋보기 버튼
+          button.btn.square.btn-default {
+            padding-left: 10px;
+            padding-right: 15px;
+            border-top-right-radius: 17px;
+            border-bottom-right-radius: 17px;
+          }
+        }
+      }
+    }
+    #board-info {
+      border: none;
+      border-bottom: 5px solid $color-main;
+      height: 80px;
+      margin-bottom: 8px;
+      background: $header-bar;
+      h1 {
+        text-align: center;
+        padding: 10px 0px 10px 80px;
+        width: calc(100%);
+        img#board-info-profile-img {
+          position: absolute;
+          left: 10px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          text-align: center;
+        }
+        a {
+          font-size: 1.4em;
+          color: $color-main;
+        }
+        a.badge-live {
+          font-size: 12px;
+        }
+      }
+      a.board-right-menu {
+        background: $base-7;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        border: $default-border rgba(255, 255, 255, 0.1);
+        color: $color-main-deep;
+      }
+    }
+    #article-info {
+      margin: 10px 2px 0px 2px;
+      padding: 15px 10px 10px 10px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border: $default-border $color-main-border;
+      border-bottom: 1px solid $base-4;
+      width: calc(100% - 4px);
+      height: 75px;
+      background: $base-color;
+      h2 {
+        float: left;
+        padding-left: 55px;
+        color: $white;
+        span {
+          color: $color-main-deep !important;
+        }
+      }
+      img.article-profile-img {
+        position: absolute;
+        left: 10px;
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    #article-content-wrapper {
+      width: calc(100% - 4px);
+      margin: 0px 2px;
+      > .header {
+        background: none;
+        border-top: none !important;
+        border-bottom: 2px dashed $base-8;
+      }
+    }
+    #article-reply-area {
+      margin: 4px 2px 20px 2px;
+      width: calc(100% - 4px);
+      background: $base-4;
+      border-radius: $radius;
+      border: $default-border $color-main-border;
+      .header {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        background: $main-bg;
+        h5,
+        a {
+          color: #fff;
+        }
+      }
+      //실제 달린 댓글들
+      #reply-real-area {
+        border-bottom: $default-border $color-main-border;
+        border-top: $default-border $color-main-border;
+        background: $body-background;
+        padding: 4px 4px;
+        .reply {
+          background: $base-6;
+          border: $default-border $color-main-border;
+          border-radius: 25px;
+          border-bottom-left-radius: 0px;
+          margin-bottom: 4px;
+          //댓글 상단의 프로필 이미지와 작성자 닉네임 부분
+          div.reply-header {
+            background: none;
+            padding: 6px 14px 4px 8px;
+            border-bottom: 2px dashed $base-8;
+            .reply-writer.logged {
+              color: $color-main-deep;
+            }
+            .reply-menu {
+              .time {
+                color: #ccc;
+              }
+            }
+          }
+          //댓글의 내용이 적혀있는 부분
+          div.reply-content {
+            color: $white;
+            background: none;
+            padding: 8px 8px 8px 14px;
+          }
+        }
+      }
+      // 댓글 작성 버튼
+      .btn-primary {
+        border: 0;
+        padding: 7px 12px;
+        font-size: 15px;
+        background: $button-bg;
+        transition-duration: 0s;
+      }
+      .btn-primary:hover {
+        background: #3da1ff;
+      }
+    }
+
+    //게시글 목록 부분
+    #article-list {
+      margin-top: 4px;
+      #article-list-category {
+        background: $line-bg;
+        padding: 4px;
+        a {
+          background: none;
+          border-radius: 18px;
+          transition: 0.2s ease 0s;
+          color: #fff !important;
+        }
+        a:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+        a.active {
+          background: rgba(255, 255, 255, 0.33);
+        }
+      }
+      > .article-list-row {
+        background: $article-list;
+        border: 0px !important;
+        margin: 3px 4px;
+        width: calc(100% - 8px);
+        border-radius: 16px;
+        border-bottom-left-radius: 0px;
+        > .item {
+          > .list-header {
+            border-bottom: none;
+            span {
+              background: $color-main-deep;
+            }
+            strong {
+              background: #e03131;
+              color: rgba(255, 255, 255, 0.9);
+              border-radius: 10px;
+              padding: 2px 5px;
+            }
+            b {
+              background: #e03131;
+            }
+          }
+          > .list-header.v0 {
+            span {
+              background: $base-8;
+            }
+          }
+          > .list-header.v15 {
+            b {
+              background: none;
+              color: #ffa200;
+            }
+          }
+          > a.list-title {
+            color: $white;
+            border-bottom: none;
+            > .list-writer {
+              display: block;
+            }
+            small.comment-count {
+              color: $color-main-deep;
+            }
+          }
+          > .list-time {
+            border-bottom: none;
+          }
+          span.category {
+            color: #666 !important;
+          }
+        }
+      }
+      > .article-list-row :hover {
+        background-color: $base-6;
+        > .item > .list-header.v0 > span {
+          color: $base-8;
+        }
+      }
+      > .article-list-row.notice {
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin: 4px;
+        width: calc(100% - 8px);
+        border: none;
+        border-left: 3px solid #e03131;
+        border-bottom: $default-border $color-main-border;
+        background-color: $base-color;
+        > .item {
+          padding: 6px 0px;
+          > a.list-title {
+            > .list-writer {
+              display: none;
+            }
+            span.title-value {
+              color: $white;
+            }
+          }
+        }
+      }
+      > .article-list-row.hot {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      > .article-list-row.hot:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      //하단매뉴
+      .pagination-area,
+      #article-list-menu,
+      #boardSearchForm {
+        background: $base-color;
+      }
+    }
+
+    #article-list > .article-list-row > .item > a.list-title > .list-writer.logged > span {
+      color: $color-main-deep;
+    }
+  }
+}
+
+nav#nav {
+  background: rgba(20, 23, 26, 0.95);
+  color: $white;
+  > .nav-header {
+    background: $button-bg;
+  }
+  > .nav-menu-area {
+    a {
+      color: #eee;
+    }
+    hr {
+      border-top: none;
+      border-bottom: 1px solid $base-color;
+    }
+  }
+  > #nav-schedule-list > a.schedule-link {
+    border-bottom: 1px solid $base-color;
+    > .time {
+      color: #aaa;
+    }
+    > .title {
+      color: #f5f5f5;
+    }
+  }
+  > a.schedule-more {
+    color: $color-main;
+  }
+  //nav 아이콘
+  > #nav-upper #noteDropdownContainer a,
+  > #nav-upper #userDropdownContainer a,
+  > #nav-upper-shortcut > .dropdown > a {
+    color: #eee;
+  }
+}
