@@ -5,6 +5,7 @@ span.a-badge i.fa.fa-picture-o {
 
 .btn-outline-danger {
   background: -webkit-linear-gradient(top left, #ff7979, #ff5151) !important;
+  color: #fff;
 }
 
 #main-content div#article-content-wrapper {
@@ -221,7 +222,7 @@ body textarea {
 
 button,
 a.btn {
-  transition: 0.15s ease 0s;
+  transition: 0.1s ease 0s;
 }
 
 .btn-default {
@@ -433,7 +434,7 @@ header #header-bar .fa {
   text-shadow: 2px 0px 2px #000, -2px 0px 2px #000, 0px 2px 2px #000, 0px -2px 2px #000;
   color: rgba(255, 255, 255, 0.9);
   font-size: 30px;
-  transition: 0.15s ease 0s;
+  transition: 0.1s ease 0s;
 }
 
 #main #main-content > div.frame div#board-info > h1 > a:hover {
@@ -635,7 +636,7 @@ div#article-list div.article-list-row {
   width: calc(100%);
   border: none;
   background: #3c3f42;
-  transition: 0.15s ease 0s;
+  transition: 0.1s ease 0s;
   padding: 2px 0px 2px 0px;
   margin-top: 4px;
   border-radius: 15px;

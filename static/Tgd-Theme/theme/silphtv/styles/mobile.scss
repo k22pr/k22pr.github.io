@@ -367,3 +367,15 @@ nav#nav {
     color: #eee;
   }
 }
+
+/*ad*/
+div.frame > div:nth-last-child(3) {
+  background: $body-background !important;
+  div {
+    border-top: 1px rgba(255, 255, 255, 0.1) !important;
+    div {
+      color: #999 !important;
+      background: none !important;
+    }
+  }
+}

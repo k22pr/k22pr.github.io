@@ -4,6 +4,7 @@ span.a-badge i.fa.fa-picture-o {
 
 .btn-outline-danger {
   background: -webkit-linear-gradient(top left, #ff7979, #ff5151) !important;
+  color: #fff;
 }
 
 #main-content div#article-content-wrapper {
